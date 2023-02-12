@@ -5,21 +5,21 @@
 class Rexcel < Formula
   desc "rexcel is a tool that reads specific rows and cells from an Excel file."
   homepage "https://github.com/kaiyujin/rexcel"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kaiyujin/rexcel/releases/download/v0.1.2/rexcel_Darwin_x86_64.tar.gz"
-      sha256 "ede2460c09c38bfb0c42341ae6620c00d8a094de960ade2dab56b515085b058c"
+      url "https://github.com/kaiyujin/rexcel/releases/download/v0.1.3/rexcel_Darwin_x86_64.tar.gz"
+      sha256 "27599ffa4f1146218db522bafd28c7f47cd75bcec828dcafb4e5a35714c63956"
 
       def install
         bin.install "rexcel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kaiyujin/rexcel/releases/download/v0.1.2/rexcel_Darwin_arm64.tar.gz"
-      sha256 "4a99373d650db525acaf439c8cb097a0d00f76cfca5bec0e994679e90d19b8ce"
+      url "https://github.com/kaiyujin/rexcel/releases/download/v0.1.3/rexcel_Darwin_arm64.tar.gz"
+      sha256 "f3bcae053f95bc97160ad182a9049bd3085021d0897ef178af0112d4db2fbdae"
 
       def install
         bin.install "rexcel"
@@ -28,17 +28,17 @@ class Rexcel < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kaiyujin/rexcel/releases/download/v0.1.2/rexcel_Linux_arm64.tar.gz"
-      sha256 "663146ad21ef1eeb26349b9479ea7fb0a9cc514ba5f10941fd486a57f9597394"
+    if Hardware::CPU.intel?
+      url "https://github.com/kaiyujin/rexcel/releases/download/v0.1.3/rexcel_Linux_x86_64.tar.gz"
+      sha256 "9da38d410a741130f2fe3e5be76b2f861e79b5835ceefb81441b6bd65091521e"
 
       def install
         bin.install "rexcel"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kaiyujin/rexcel/releases/download/v0.1.2/rexcel_Linux_x86_64.tar.gz"
-      sha256 "b56c11ef7cb45b38da3918942a0748772883012231cbb1c324c6a689aa1e38e6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kaiyujin/rexcel/releases/download/v0.1.3/rexcel_Linux_arm64.tar.gz"
+      sha256 "15f173b41108634d7b92225a325c28f7d82655c1ada3ef831a5f1a151c959439"
 
       def install
         bin.install "rexcel"
